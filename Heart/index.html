@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>宝贝映映 生日快乐</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        @font-face {
+            font-family: digit;
+            src: url('digital-7_mono.ttf') format("truetype");
+        }
+    </style>
+    <link href="css/default.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+<body>
+    <div id="mainDiv">
+        <div id="content">
+            <div id="code">
+                <span class="comments">I've Known you for a while now -or so i thought.</span>
+                <br />
+                <span class="comments">At first，I said a month,</span>
+                <br />
+                <span class="comments">but then i laughed，Realizing it's been a whole year(approx).</span>
+                <br />
+                <span class="comments">A year of wild arguments,</span>
+                <br />
+                <span class="comments">silly debates</span>
+                <br />
+                <span class="comments">and unforgettable moments.</span>
+                <br />
+                <span class="comments">Through it all,</span>
+                <br />
+                <span class="comments">one thing remained constant:</span>
+                <br />
+                <span class="comments">you've been growing on me,</span>
+                <br />
+                <span class="comments">slowly, quietly, beautifully.</span>
+                <br />
+                <span class="comments">And more than that,</span>
+                <br />
+                <span class="comments">you’ve been growing into yourself,</span>
+                <br />
+                <span class="comments">becoming someone even more incredible.</span>
+                <br />
+                <span class="comments">To know you deeply</span>
+                <br />
+                <span class="comments">and to be part of your life,</span>
+                <br />
+                <span class="comments">is something I don’t take for granted.</span>
+                <br />
+                <span class="comments">Thank you — for all of it</span>
+                <br />
+                <span class="comments">Happy Birthday.</span>
+                <br />
+                <span class="comments">...</span>
+                <br />
+                <span class="comments">...</span>
+                <br />
+                <span class="comments">...</span>
+                <br />
+                <span class="comments">...</span>
+                <br />
+                <span class="comments">...</span>
+                <br />
+                <span class="comments">...</span>
+                <br />
+                <span class="comments">...</span>
+                <br />
+                <span class="comments">...</span>
+                <br />
+                <span class="comments">...</span>
+                <br />
+                <span class="comments">Also Please Make Some Tiramisu For Me</span>
+                <br />
+            </div>
+            <div id="loveHeart">
+                <canvas id="garden"></canvas>
+                <div id="words">
+                    <div id="messages">
+                        Time since the universe decided to show off -aka, the day you were born.
+                        <div id="elapseClock"></div>
+                    </div>
+                    <div id="loveu">
+                        Happy Birthday!
+                        <br/>₍^. .^₎⟆
+                        <div class="signature">- H</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var offsetX = $("#loveHeart").width() / 2;
+        var offsetY = $("#loveHeart").height() / 2 - 55;
+        var together = new Date();
+        together.setFullYear(2001, 4, 13);
+        together.setHours(0);
+        together.setMinutes(0);
+        together.setSeconds(0);
+        together.setMilliseconds(0);
+        if (!document.createElement('canvas').getContext) {
+            var msg = document.createElement("div");
+            msg.id = "errorMsg";
+            msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+            document.body.appendChild(msg);
+            $("#code").css("display", "none")
+            $("#copyright").css("position", "absolute");
+            $("#copyright").css("bottom", "10px");
+            document.execCommand("stop");
+        } else {
+            setTimeout(function () {
+                startHeartAnimation();
+            }, 5000);
+            timeElapse(together);
+            setInterval(function () {
+                timeElapse(together);
+            }, 500);
+            adjustCodePosition();
+            $("#code").typewriter();
+        }
+    </script>
+    <audio src="AOTG.mp3" autoplay="true"></audio>
+</body>
+</html>
