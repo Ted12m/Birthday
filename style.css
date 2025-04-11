@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #0d0d0d;
+  color: #FFB3BA;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(45, 42, 50, 0.95);
+  z-index: 999;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+}
+
+nav a, nav button {
+  color: #FFB3BA;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav button:hover, nav a:hover {
+  color: #FF677D;
+}
+
+/* Sections */
+section {
+  padding: 100px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.5rem;
+  color: #FF677D;
+  margin-bottom: 10px;
+}
+
+.letter {
+  background: #2D2A32;
+  border-left: 5px solid #D4A5A5;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.6rem;
+  padding: 60px 40px;
+  margin: 80px auto;
+  color: #FFB3BA;
+}
+
+.photo {
+  text-align: center;
+}
+
+.photo img {
+  max-width: 50%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 119, 205, 0.3);
+}
+
+.photo figcaption {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #D4A5A5;
+}
+
+/* Scroll Animations */
+.fade-in, .slide-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease-out;
+}
+
+.fade-in.visible, .slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  display: none;
+}
+
+#revealLetterBtn {
+  background-color: #FF677D;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  margin: 20px auto;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+#showcakebtn {
+  background-color: #FF677D;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  margin: 20px auto;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+#revealMemoryBtn {
+  background-color: #FF677D;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  margin: 20px auto;
+  display: block;
+  transition: background-color 0.3s;
+}
+#revealLetterBtn:hover {
+  background-color: #FFB3BA;
+}
+
+body {
+  cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+CiAgPHRleHQgeT0iMjYiIGZvbnQtc2l6ZT0iMjgiPvCfjbA8L3RleHQ+Cjwvc3ZnPg==') 16 16, auto;
+}
+
+body.burger-cursor {
+  cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+CiAgPHRleHQgeT0iMjYiIGZvbnQtc2l6ZT0iMjgiPvCfjZQ8L3RleHQ+Cjwvc3ZnPg==') 16 16, auto;
+}
+
+.balloon {
+  position: fixed;
+  bottom: -100px;
+  width: 30px;
+  height: 40px;
+  background-color: pink;
+  border-radius: 50% 50% 45% 45%;
+  animation: floatUp 10s linear infinite;
+  z-index: 1000;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
