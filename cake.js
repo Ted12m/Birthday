@@ -8,7 +8,7 @@ $(document).ready(function() {
       $(".flame").animate({"opacity": 0}, "fast");
       $(".flame2").animate({"opacity": 0}, "fast");
       $(".flame3").animate({"opacity": 0}, "fast");
-      $(".text").animate({ "top": -300, "opacity": 1 }, "fast");
+      $(".text").animate({ "top": -150, "opacity": 1 }, "fast");
     confetti({
       particleCount: 120,
       spread: 80,
