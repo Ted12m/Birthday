@@ -7,10 +7,7 @@ $(document).ready(function() {
       $(".flame2").animate({"opacity": 0}, "fast");
       $(".flame3").animate({"opacity": 0}, "fast");
       $(".text").animate({ "top": -300, "opacity": 1 }, "fast");
-
-
-       HBD.play();
-    // Trigger confetti
+        HBD.play();
     confetti({
       particleCount: 120,
       spread: 80,
